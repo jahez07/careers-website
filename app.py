@@ -12,8 +12,7 @@ JOBS =[
   {
     'id':2,
     'title': 'Data Scientist',
-    'location': 'Delhi, India',
-    'salary': 'Rs. 15,00,000',
+    'location': 'Delhi, India'
   },
   {
     'id':3,
