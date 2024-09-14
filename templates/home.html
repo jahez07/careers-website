@@ -24,10 +24,12 @@
       <div>
         {% for job in jobs %}
           <div class="mt-4">
-            <h4 class="mb-1">{{job['title']}}</h4>
+            <h4 class="mb-1" style="color: rgb(120, 120, 120);">{{job['title']}}</h4>
+            {% if 'salary' in job %}
             <div>
-              Location: {{job['location']}}
+              <b>Location:</b> {{job['location']}}
             </div>
+            {% endif %}
           </div>
         {% endfor %}
       </div>
