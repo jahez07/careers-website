@@ -10,35 +10,72 @@
   <title>Waiting Period</title>
   <style>
     #banner {
-      width: 100%;
-      height: 30rem;
-      object-fit: cover;
+      width: 10%;
+      height: 10rem;
+      object-fit: contain;
+    }
+
+    body {
+      background-image: url('/static/bg.jpg');
+
+    }
+
+    nav {
+      background-image: linear-gradient(to right, rgb(145, 209, 218), white);
+      
+      height: 60px;
+      width: 90vw;
+      margin: 0 auto;
+      margin-top: 40px;
+      padding-left: 1em;
+      padding-right: 1em;
+      box-sizing: border-box;
+      display: block;
+      box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.15),
+        0px 10px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 9px;
+      position: relative;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      position: relative;
+      z-index: 2;
     }
   </style>
 </head>
 
 <body>
   {% include 'nav.html' %}
+  <div class="text-center px-2 py-3 my-2">
+    <img class="img-fluid" id="banner" src="/static/logo.svg">
+  </div>
   <div class="container">
-    <h1 class="text-center mb-4 mt-2">Jovian Careers</h1>
-    <img class="img-fluid" id="banner" src="static/banner1.jpg">
-    <h2 class="text-center mb-4 mt-2">About Jovian</h2>
-    <p class="lead ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-      pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-      laborum.</p>
-    <h2 class="text-center mb-4 mt-2">Open Positions</h2>
-    <div>
+    <h1 class="text-center mb-4 mt-2 display-5 fw-bold text-body-emphasis">Jovian Careers</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead text-center justify-content-center mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do
+        eiusmod tempor incididunt ut labore
+        et dolore magna aliqua. </p>
+      <div class="overflow-hidden mt-2" style="max-height: 40vh; width: 100%;">
+        <div class="container px-5 py-3">
+          <img src="/static/banner1.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image"
+            width="700" height="500" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <h2 class="text-center mb-4 mt-5 fw-bold">Open Positions</h2>
+    <div class="px-5">
       {% for job in jobs %}
-        {% include 'jobitem.html' %}
+      {% include 'jobitem.html' %}
       {% endfor %}
     </div>
     <div class="text-center mt-4">
-      <button class="btn btn-primary btn-lg shadow">Contact Us</button>
-      <p class="mt-5" style="color: rgb(120, 120, 120);">Copyright © 2024, Jahez Abraham Johny</p>
+      <a class="btn btn-primary btn-lg shadow" href="mailto:jahezjohn18950@gmail.com">Contact Us</a>
     </div>
   </div>
+  {% include 'footer.html' %}
 </body>
 
 </html>
