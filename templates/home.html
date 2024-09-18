@@ -24,39 +24,45 @@
       background-image: url('/static/bg.jpg');
       font-family: "Inter", sans-serif;
     }
+
+    .main {
+      margin-top: 80px;
+    }
   </style>
 </head>
 
 <body>
   {% include 'nav.html' %}
-  <div class="text-center px-2 py-3 my-2">
-    <img class="img-fluid" id="banner" src="/static/logo.svg">
-  </div>
-  <div class="container">
-    <h1 class="text-center mb-4 mt-2 display-5 fw-bold text-body-emphasis">Jovian Careers</h1>
-    <div class="col-lg-6 mx-auto">
-      <p class="lead text-center justify-content-center mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do
-        eiusmod tempor incididunt ut labore
-        et dolore magna aliqua. </p>
-      <div class="overflow-hidden mt-2" style="max-height: 40vh; width: 100%;">
-        <div class="container px-5 py-3">
-          <img src="/static/banner1.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image"
-            width="700" height="500" loading="lazy">
+  <main class="main">
+    <div class="text-center px-2 py-3 my-2">
+      <img class="img-fluid" id="banner" src="/static/logo.svg">
+    </div>
+    <div class="container">
+      <h1 class="text-center mb-4 mt-2 display-5 fw-bold text-body-emphasis">Jovian Careers</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="lead text-center justify-content-center mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do
+          eiusmod tempor incididunt ut labore
+          et dolore magna aliqua. </p>
+        <div class="overflow-hidden mt-2" style="max-height: 40vh; width: 100%;">
+          <div class="container px-5 py-3">
+            <img src="/static/banner1.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image"
+              width="700" height="500" loading="lazy">
+          </div>
         </div>
       </div>
-    </div>
 
-    <h2 class="text-center mb-4 mt-5 fw-bold">Open Positions</h2>
-    <div class="px-5">
-      {% for job in jobs %}
-      {% include 'jobitem.html' %}
-      {% endfor %}
+      <h2 class="text-center mb-4 mt-5 fw-bold">Open Positions</h2>
+      <div class="px-5">
+        {% for job in jobs %}
+        {% include 'jobitem.html' %}
+        {% endfor %}
+      </div>
+      <div class="text-center mt-4">
+        <a class="btn btn-primary btn-lg shadow" href="mailto:jahezjohn18950@gmail.com">Contact Us</a>
+      </div>
     </div>
-    <div class="text-center mt-4">
-      <a class="btn btn-primary btn-lg shadow" href="mailto:jahezjohn18950@gmail.com">Contact Us</a>
-    </div>
-  </div>
+  </main>
   {% include 'footer.html' %}
 </body>
 
