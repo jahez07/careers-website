@@ -1,9 +1,4 @@
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
 
     ul {
         list-style: none;
@@ -12,6 +7,7 @@
     a {
         color: inherit;
         text-decoration: none;
+        align-items: center;
     }
 
     .header{
@@ -21,10 +17,38 @@
         width: 100%;
         backdrop-filter: blur(6px);
         top: 0;
+        flex-direction: row;
     }
 
-    .main{
-        margin-top: 80px;
+    .header__content{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0 30px;
+        min-height: 60px;
+    }
+
+    .logo{
+        font-size: 25px;
+        letter-spacing: -1.5px;
+        font-weight: 600;
+    }
+
+    .nav__list {
+        display: flex;
+        column-gap: 40px;
+        align-self: center;
+    }
+
+    .nav__link {
+        color: rgba(0, 0, 0, 0.65);
+        font-weight: 500;
+        font-size: 15px;
+        transition: all 0.8s;
+    }
+
+    .nav__link:hover {
+        color: rgb(0, 0, 0, 1);
     }
 </style>
 <header class="header">
@@ -40,7 +64,7 @@
                     <a href="#" class="nav__link">Projects</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#" class="nav__link">Careers</a>
+                    <a href="#" class="btn">Careers</a>
                 </li>
             </ul>
         </nav>
